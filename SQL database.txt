@@ -32,3 +32,5 @@ INSERT INTO comments (username, comment_text, users_id) VALUES ('LoganDuran', 'P
 
 
 SELECT * FROM comments WHERE users_id = 1;
+
+SELECT * FROM users INNER JOIN comments ON users.id = comments.users_id;
