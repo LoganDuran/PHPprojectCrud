@@ -8,10 +8,20 @@
 </head>
     <header>
         <h2 class="logo">Tankophile.net</h2>
+        
+        <div class="navmenu">
+        <div class="searchbox">
+            <form class="search-input" action="search.php" method="post">
+                
+                <input id="search" type="text" name="usersearch" placeholder="Search..">
+
+
+                <button type="submit">Go</button> <br>
+            </form>
+        </div>
         <nav class="nav">
-            <a href="#">Home</a>
+            <a href="index.php">Home</a>
             <a href="#">About</a>
-            <a href="search.php">Search</a>
             <a href="#">Contact</a>
             <a class="allbuttons">
                 <?php 
@@ -30,7 +40,8 @@
                 
                 ?>
             </a>
-        </nav>
+         </nav>
+        </div>
     </header>
     <body>
         

@@ -31,6 +31,11 @@ header {
 
 }
 
+.navmenu {
+    display: flex;
+    align-items: center;
+}
+
 header h2 {
     margin: 30px;
     font-size: 2.5em;
@@ -111,5 +116,46 @@ button {
     padding: 0 10px 0 10px ;
     margin: 0 15px 15px 15px;
 
+
+}
+
+/* --- Search sekcija --- */
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgb(220, 220, 220);
+    border-radius: 25px;
+    width: 160px;
+    height: 35px;
+}
+
+
+.searchbox input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 15px;
+    width: 85px;
+    height: 35px;
+}
+
+.searchbox button {
+    border: none;
+    border: none;
+    outline: none;
+    color: gray;
+    width: 55px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.searchresults {
+    width: 300px;
+    height: auto;
+    padding: 25px;
+    margin: 20px;
 
 }
