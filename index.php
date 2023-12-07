@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PocetakPHP</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php 
+    include_once("header.php");
+?>
+
 <body>
     <main>
         <div class="wrapper">
             <form class="centralni-input" action="inc/formhandler.php" method="post">
+                <H2>Signup Form</H2>
                 <label for="username">This is a Username field</label>
                 <input id="username" required type="text" name="username" placeholder="Username">
 
@@ -29,8 +26,14 @@
                 </select>
                 
                 <button type="submit">Submit</button> <br>
+
+                <a href="change.php">Change account</a>
             </form>
         </div>
     </main>
 </body>
-</html>
+
+
+<?php 
+    include_once("footer.php");
+?>
