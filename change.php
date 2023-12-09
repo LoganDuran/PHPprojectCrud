@@ -7,16 +7,16 @@
         <div class="wrapper">
             <form class="centralni-input" action="inc/userupdate.php" method="post">
                 <h2>Edit Account</h2>
-                <label for="username">This is a Username field</label>
+                <label for="username">Enter your Username</label>
                 <input id="username" type="text" name="username" placeholder="Username">
 
-                <label for="email">This is a email field</label>
+                <label for="email">Enter your email</label>
                 <input id="email" type="text" name="email" placeholder="email">
                 
-                <label for="pwd">This is a Password field</label>
+                <label for="pwd">Enter your Password</label>
                 <input type="password" name="pwd" id="pwd" placeholder="Password">
                 
-                <label for="favtank">Favorite Tank</label>
+                <label for="favtank">Choose your favorite Tank</label>
                 <select id="favtank" name="favtank">
                     <option value="none">None</option>
                     <option value="t34">T-34</option>
@@ -31,10 +31,10 @@
 
             <form class="centralni-input" action="inc/userdelete.php" method="post">
                 <h2>Delete Account</h2>
-                <label for="username">This is a Username field</label>
+                <label for="username">Enter your Username</label>
                 <input id="username" type="text" name="username" placeholder="Username">
                 
-                <label for="pwd">This is a Password field</label>
+                <label for="pwd">Enter your Password</label>
                 <input type="password" name="pwd" id="pwd" placeholder="Password">
            
                 
