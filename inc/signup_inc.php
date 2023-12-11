@@ -2,10 +2,11 @@
 
 if ($_SERVER["REQUESt_METHOD"] === "POST") {
 
-    $username = htmlspecialchars($_POST["username"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $pwd = htmlspecialchars($_POST["pwd"]);
-    $favtank = htmlspecialchars($_POST["favtank"]);
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $pwd = $_POST["pwd"];
+    $pwdrepeat = $_POST["pwdrepeat"];
+    $favtank = $_POST["favtank"];
 
     try {
 
@@ -27,7 +28,7 @@ if ($_SERVER["REQUESt_METHOD"] === "POST") {
             $errors["username_taken"] = "Unfortunately that username already exists.";
         }
         if (is_email_registered($pdo, $email)){
-            $errors["email_used"] = "That email address is already registered.";
+            $errors["email_used"] = "This email address is already registered.";
         }
         if (is_pwdrepeat_same($pwd, $pwdrepeat)){
             $errors["pwd_mismatch"] = "Your passwords do not match.";
@@ -44,7 +45,7 @@ if ($_SERVER["REQUESt_METHOD"] === "POST") {
 
 
     } catch (PDOException $e) {
-        die("Query error: " . $e->getMessage());
+        die("Query failed: " . $e->getMessage());
     }
 
 } else {

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 function is_input_empty(string $username, string $pwd, string $pwdrepeat, string $email) {
-    if(empty($username)||empty($pwd)||empty($pwdrepeat)||empty($email)) {
+    if(empty($username) || empty($pwd) || empty($pwdrepeat) || empty($email)) {
         return true;
     }else {
         return false;

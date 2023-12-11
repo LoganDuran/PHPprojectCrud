@@ -36,8 +36,6 @@
                 <?php
                 check_signup_errors();
                 ?>
-
-                <a href="change.php">Change account</a>
             </form>
         </div>
     </main>
