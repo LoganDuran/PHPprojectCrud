@@ -1,19 +1,20 @@
 <?php 
+    require_once 'inc/config_session_inc.php';
+    require_once 'inc/signup_view_inc.php';
     include_once("header.php");
-    session_start();
 
 ?>
 
 <body>
     <main>
         <div class="wrapper">
-            <form class="centralni-input" action="inc/formhandler.php" method="post">
+            <form class="centralni-input" action="inc/signup_inc.php" method="post">
                 <H2>Signup Form</H2>
                 <label for="username">Enter your Username</label>
-                <input id="username" required type="text" name="username" placeholder="Username">
+                <input id="username" type="text" name="username" placeholder="Username">
 
                 <label for="email">Enter your email</label>
-                <input id="email" required type="text" name="email" placeholder="email">
+                <input id="email" type="text" name="email" placeholder="email">
                 
                 <label for="pwd">Enter your Password</label>
                 <input type="password" name="pwd" id="pwd" placeholder="Password">
@@ -31,6 +32,10 @@
                 </select>
                 
                 <button type="submit">Submit</button> <br>
+
+                <?php
+                check_signup_errors();
+                ?>
 
                 <a href="change.php">Change account</a>
             </form>
