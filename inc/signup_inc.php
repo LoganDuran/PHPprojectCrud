@@ -37,7 +37,7 @@ if ($_SERVER["REQUESt_METHOD"] === "POST") {
         require_once 'config_session_inc.php';
 
         if ($errors) {
-            $_SESSION["errors_signup"] = $errors;
+            $_SESSION['errors_signup'] = $errors;
             header("Location: ../index.php");
             die();
         }
@@ -49,6 +49,6 @@ if ($_SERVER["REQUESt_METHOD"] === "POST") {
     }
 
 } else {
-    header("Location: ../index.php");
+    header("Location: ../index.php?error");
     die();
 }

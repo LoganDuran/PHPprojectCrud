@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 function is_input_empty(string $username, string $pwd, string $pwdrepeat, string $email) {
     if(empty($username) || empty($pwd) || empty($pwdrepeat) || empty($email)) {
         return true;
@@ -33,7 +34,7 @@ function is_email_registered(object $pdo, string $email) {
         return false;
     }
 }
-
+    
 function is_pwdrepeat_same(string $pwd, string $pwdrepeat) {
     if($pwd != $pwdrepeat) {
         return true;
