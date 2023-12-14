@@ -1,6 +1,11 @@
 <?php
 
+//Signup model tasked with interacting with the database
+
 declare(strict_types=1);
+
+
+// Error handler functions
 
 function get_username(object $pdo, string $username){
     $query = "SELECT username FROM users WHERE username = :username;";
