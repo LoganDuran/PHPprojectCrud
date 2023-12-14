@@ -1,7 +1,11 @@
 <?php
 
+// Signup controller tasked with managing the user input
+
 declare(strict_types=1);
 
+
+// Error handler functions
 
 function is_input_empty(string $username, string $pwd, string $pwdrepeat, string $email) {
     if(empty($username) || empty($pwd) || empty($pwdrepeat) || empty($email)) {
