@@ -1,5 +1,7 @@
 <?php
 
+// Verifying if the user has reached the page through a post method
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $username = $_POST["username"];
@@ -14,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once 'signup_model_inc.php';
         require_once 'signup_contr_inc.php';
 
-        // ERROR HANDLERS
+        // Going through some basic error handlers
 
         $errors = [];
 
