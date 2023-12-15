@@ -26,3 +26,14 @@ function get_email(object $pdo, string $email){
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function create_user(object $pdo, string $username, string $pwd, string $email, string $favtank) {
+    $query = "INSERT INTO users (username, pwd, email, favtank) WHERE (:username, :pwd, :email, :favtank) ;";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(":username", $username);
+    $stmt->bindParam(":pwd", $pwd);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":favtank", $favtank);
+    $stmt->execute();
+}
