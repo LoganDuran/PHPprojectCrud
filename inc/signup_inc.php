@@ -44,7 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die();
         }
 
-
+        create_user(){
+            
+        }
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());

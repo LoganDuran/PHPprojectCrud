@@ -46,3 +46,9 @@ function is_pwdrepeat_same(string $pwd, string $pwdrepeat) {
         return false;
     }
 }
+
+
+function create_user(object $pdo, string $username, string $pwd, string $pwdrepeat, string $email, string $favtank) {
+   
+    set_user()
+}
