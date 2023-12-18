@@ -27,7 +27,7 @@ function get_email(object $pdo, string $email){
     return $result;
 }
 
-function create_user(object $pdo, string $username, string $pwd, string $email, string $favtank) {
+function set_user(object $pdo, string $username, string $pwd, string $email, string $favtank) {
     $query = "INSERT INTO users (username, pwd, email, favtank) WHERE (:username, :pwd, :email, :favtank) ;";
     $stmt = $pdo->prepare($query);
 

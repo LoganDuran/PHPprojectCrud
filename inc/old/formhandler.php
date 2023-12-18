@@ -15,14 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         require_once "dbh_inc.php";
 
-        $query = "INSERT INTO users (username, email, pwd, favtank) VALUES (:username, :email, :pwd, :favtank);";
+        $query = "INSERT INTO users (username, pwd, email, favtank) VALUES (:username, :pwd, :email, :favtank);";
 
         $statement = $pdo->prepare($query);
 
         
         $statement->bindParam(":username", $username);
-        $statement->bindParam(":email", $email);
         $statement->bindParam(":pwd", $pwd);
+        $statement->bindParam(":email", $email);
         $statement->bindParam(":favtank", $favtank);
         
         $statement->execute();
