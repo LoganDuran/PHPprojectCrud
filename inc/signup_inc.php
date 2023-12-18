@@ -44,9 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die();
         }
 
-        create_user(){
-            
-        }
+        create_user($pdo, $username, $pwd, $email, $favtank);
+
+        header("Location: ../index.php?signup-successful");
+        
+        $pdo = null;
+        $stmt = null;
+        
+        die();
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
