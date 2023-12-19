@@ -1,4 +1,4 @@
-# PHPprojectCrud - a simple but functional CRUD application using PHP
+# PHPprojectCrud - a simple CRUD application using PHP
 
 ![PHPprojectCRUD](https://github.com/LoganDuran/PHPprojectCrud/assets/106428943/c5d420f8-aed7-417a-a57a-33832f54263b)
 
