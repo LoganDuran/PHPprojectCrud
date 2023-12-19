@@ -9,9 +9,18 @@
 
 - [ ] I also plan on transferring the code from procedural to object-oriented.
 
-### Built with
+### Technologies used
 
-- very simple frontend consisting of only HTML and CSS 
-- the rest is handled by PHP and MySQL 
-- everything was coded from scratch manually, although I did have to reference quite a lot of online resources
-- no frameworks or libraries were hurt in the making of this application!
+- very simple frontend consisting of only **HTML** and **CSS** 
+- the rest is handled by **PHP** and **MySQL** 
+- everything was coded from scratch manually, although I did have to reference quite a lot of online resources 
+- **No frameworks or libraries were hurt** in the making of this application!
+
+
+### Where we are at
+
+- [x] Create, Read, Update, and Delete
+
+- [ ] restructuring the project around the MVC Architecture.
+
+- [ ] refactor the code base around OOP
