@@ -3,11 +3,11 @@
 ![PHPprojectCRUD](https://github.com/LoganDuran/PHPprojectCrud/assets/106428943/c5d420f8-aed7-417a-a57a-33832f54263b)
 
 
-- [x] the main assignment of the project is to build a simple but functional CRUD application using PHP.
+ the main assignment of the project is to build a simple but functional CRUD application using PHP.
 
-- [ ] currently in the process of restructuring the project around the MVC Architecture.
+ currently in the process of restructuring the project around the MVC Architecture.
 
-- [ ] I also plan on transferring the code from procedural to object-oriented.
+ I also plan on transferring the code from procedural to object-oriented.
 
 ### Technologies used
 
