@@ -24,7 +24,7 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a class="allbuttons">
-               <?php /*
+               <?php 
                     if(isset($_SESSION["userid"])){
                       
                      ?> 
@@ -38,7 +38,7 @@
                         <?php              
                     }
                 
-                */?> 
+                ?> 
             </a>
          </nav>
         </div>
