@@ -1,38 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Righteous&display=swap');
 
 
-
 :root {
     --primary:  rgb(151, 136, 166);
     --dark: #60a1cf;
     --black: #0d1117;
-    --gray: gray;
-    --light: rgb(220, 220, 220);
-
-    
+    --gray: #30363d;
+    --light: white;
 
 
     --blur: blur(20px);
     --shadow: 0 0 30px var(--gray);
 
+    --radius: 1.0rem;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
 * {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     font-family: 'Comfortaa';
 }
+
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+} 
 
 body {
     background: url(img/pustolov\ \(4\).jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* --- Header Section --- */
 
 header {
     display: flex;
@@ -46,20 +69,76 @@ header {
     border: 2px solid rgb(255, 255, 255 .5);
     box-shadow: 0 0 30px rgba(0, 0, 0, .95);
     color: papayawhip;
-
 }
 
-.navmenu {
+.logo {
+    
+    font-size: 3rem;
+    font-family: Righteous;
+    font-weight: bold;
+    color:  var(--light);
+    user-select: none;
+    cursor: pointer;
+    margin: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.logo span {
+    color:  var(--primary);
+    font-family: Righteous;
+}
+
+
+nav{
     display: flex;
     align-items: center;
 }
 
-header h2 {
-    margin: 30px;
-    font-size: 2.5em;
-    user-select: none;
-    cursor: pointer;
+.navlist {
+    display: flex;
+    align-items: center;
+
 }
+
+.navlist .underline a {
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    width: fit-content;
+}
+
+
+
+
+/* --- Sliding Underline ---  */  
+.navlist .underline a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navlist .underline a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+
+
+/* 
+
 
 nav .nav{
     padding: 30px;
@@ -69,8 +148,7 @@ nav .nav{
     font-size: 1.2rem;
     color: var(--light);
     text-decoration: none;
-    padding: 20px;
-    margin: 20px;
+    margin: 40px;
 }
 
  nav a::after {
@@ -89,31 +167,37 @@ nav .nav{
  nav a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
-}
+} */
 
-a.allbuttons {
+ul a .loginbutton {
+    background-color: rgb(220, 220, 220);
     margin-left: 0px;
-}
-
-
-
-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    text-decoration: none;
+    border: none;
+    border: none;
+    outline: none;
+    color: gray;
     width: 100%;
-    height: 90vh;
+    height: 35px;
+    padding: 0 5px 0 5px;
+    margin-left: 40px;
+
 
 }
+
+
+
 
 button {
+    
+    text-decoration: none;
+
     width: 120px;
     height: 45px;
     background-color: rgb(107, 107, 107, 25%);
     
     border: 2px solid papayawhip;
-    color: papayawhip;
+    color: gray;
     font-size: 1.1em;
     outline: none;
     border-radius: 25px;
@@ -161,7 +245,7 @@ button {
 
 }
 
-/* --- Search sekcija --- */
+/* --- Search section --- */
 
 .searchbox {
     display: flex;
@@ -169,7 +253,7 @@ button {
     flex-wrap: nowrap;
     background-color: rgb(220, 220, 220);
     border-radius: 25px;
-    width: 160px;
+    /* width: 160px; */
     height: 35px;
 }
 
@@ -183,7 +267,7 @@ button {
     height: 35px;
 }
 
-.searchbox button {
+.searchbox .searchbutton {
     border: none;
     border: none;
     outline: none;
