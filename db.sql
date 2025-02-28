@@ -5,6 +5,7 @@ CREATE TABLE users (
     username VARCHAR(30) NOT NULL,
     pwd VARCHAR (255) NOT NULL,
     email VARCHAR(100) NOT NULL,
+    favtank VARCHAR(30),
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
     PRIMARY KEY (id)
 );

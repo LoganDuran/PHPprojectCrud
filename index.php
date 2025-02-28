@@ -1,8 +1,5 @@
 <?php 
     include_once("header.php");
-    require_once 'inc/config_session_inc.php';
-    require_once 'inc/signup_view_inc.php';
-
 ?>
 
 <body>

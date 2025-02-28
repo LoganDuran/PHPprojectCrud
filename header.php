@@ -1,3 +1,7 @@
+<?php
+require_once 'inc/config_session_inc.php';
+require_once 'inc/signup_view_inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,21 +28,21 @@
             <li class="underline"><a href="index.php">Home</a></li>
             <li class="underline"><a href="#">About</a></li>
             <li class="underline"><a href="#">Contact</a></li>
-            <li><a class="loginbutton">
-               <?php 
-                    if(isset($_SESSION["userid"])){
-                      
-                     ?> 
-                     <button class="loginbutton"><?php echo $_SESSION["useruid"]; ?> </button>
-                     <?php              
-                    }
-                    else
-                    {
-                        ?>
-                        <button class="loginbutton">Login </button>
-                        <?php              
-                    } ?> 
-             </a></li>
+            <li><a>
+                <?php 
+                if (isset($_SESSION["user_id"])) {
+                    ?>
+                    <form action="inc/logout_inc.php" method="post">
+                        <button class="loginbutton">Logout</button>
+                    </form>
+                    <?php
+                } else {
+                    ?>
+                    <button class="loginbutton" onclick="window.location.href='login.php'">Login</button>
+                    <?php
+                }
+                ?> 
+            </a></li>
             </ul>
         </nav>    
         <div class = "hamMenu"><div class = "hamButton"></div></div>
